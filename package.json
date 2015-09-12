@@ -1,0 +1,6 @@
+{
+	"name" : "dbserver",
+	"scripts" : {
+		"start" : "node db_server.js"
+	}
+}
