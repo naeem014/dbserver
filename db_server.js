@@ -14,7 +14,7 @@ io.sockets.on('connection', function (socket) {
 
 	socket.on('project_message', function (data) {
 		var arr = data.split(',');
-		var post = {p_id: parseInt(arr[0], 10), u_id: parseInt(arr[1], 10), message: arr[2], unix_stamp: Math.floor(Date.now()/1000)};
+		var post = {p_id: parseInt(arr[0], 10), u_id: parseInt(arr[1], 10), message: arr[2], unix_stamp: parseInt(arr[3], 10)};
 
 		pool.getConnection(function (err, connection) {
 			if (err) {
