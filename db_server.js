@@ -38,7 +38,7 @@ io.sockets.on('connection', function (socket) {
 				console.log(err);
 				return;
 			}
-			connection.query('SELECT * FROM project_messages WHERE p_id = '+param, function (err, result) {
+			connection.query('SELECT * FROM project_messages WHERE p_id = '+param+' ORDER BY m_id DESC LIMIT 100', function (err, result) {
 				if (err) {
 					console.log(err);
 				}
